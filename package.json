@@ -1,0 +1,22 @@
+{
+  "name": "wsserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DruzhininVA22/practice_nodejs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^21.1.0",
+    "node-fetch": "^3.3.2",
+    "server.js": "^1.0.0",
+    "ws": "^8.14.2"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Клиент</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header lock-padding">
+        <nav class="header_container">
+          <div class="content_title">
+            <strong>dog</strong>, <strong>cat</strong>, <strong>bear</strong>
+          </div>
+          <div class="content_text">
+            <input
+              id="input_keyword"
+              type="text"
+              placeholder="Поиск"
+              class="input_field"
+            />
+            <button
+              id="get-URLs"
+              class="input_button"
+              onclick="return get_or_update_URL_list()"
+              aria-label="Поиск"
+            >
+              Искать
+            </button>
+          </div>
+        </nav>
+      </header>
+      <div class="content">
+        <div class="content_container _container">
+          <section class="content_section content_section_row">
+            <div class="content_body">
+              <h1 class="content_title">Результаты:</h1>
+              <div class="content_text">
+                <div class="list_URLs">
+                  <ul id="menu" class="menu"></ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

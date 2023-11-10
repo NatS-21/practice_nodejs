@@ -1,0 +1,264 @@
+:root {
+  --main-bg-color: rgb(28, 28, 28);
+  --text-color: #fff;
+  --link-color: red;
+  --button-hover-color: lightskyblue;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 180%;
+  background-color: var(--main-bg-color);
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+strong {
+  color: lightskyblue;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu > li a {
+  display: inline-block;
+  margin: 0 2px;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% sans-serif;
+  padding: 0.5em 2em 0.55em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  color: #d9eef7;
+  border: solid 1px lightskyblue;
+  background: lightskyblue;
+}
+
+.menu > li:hover a {
+  text-decoration: none;
+  background: var(--button-hover-color);
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+._container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: black;
+}
+
+.header_container {
+  display: flex;
+  height: 80px;
+  padding: 0px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input_field {
+  height: 30px;
+  padding: 0 10px;
+}
+
+.input_button {
+  height: 30px;
+  font-size: large;
+  font-style: bold;
+  border-radius: 5px;
+  padding: 0 10px;
+  border: 2px solid grey;
+}
+
+.input_button:hover {
+  color: var(--text-color);
+  background-color: var(--button-hover-color);
+}
+
+.content {
+  padding: 130px 0px 0px 0px;
+  color: white;
+}
+
+.content_section {
+  margin: 0px 0 50px 0;
+}
+
+.content_section_row {
+  margin: 0px 20px 50px;
+}
+
+@media (min-width: 992px) {
+  .content_section_row {
+      display: flex;
+  }
+}
+
+.content_body {
+  flex: 0 1 100%;
+  padding: 0px 20px;
+}
+
+.content_title {
+  font-size: 30px;
+  margin: 0px 0px 0.5em 0px;
+}
+
+
+
+.window-modal {
+  --modal-margin: 0.5rem;
+}
+
+@media (min-width: 1076px) {
+  .window-modal {
+    --modal-margin: 1.75rem;
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: rgb(0 0 0 / 50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  pointer-events: none;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: var(--modal-margin);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgb(0 0 0 / 20%);
+  border-radius: 0.3rem;
+  box-shadow: 0 0 7px 0 rgb(0 0 0 / 30%);
+  transition: opacity 0.3s ease-in;
+}
+
+@media (min-width: 1076px) {
+  .modal-content {
+    max-width: 1000px;
+    margin: var(--modal-margin) auto;
+  }
+}
+
+.modal-show .modal-backdrop,
+.modal-show .modal-content {
+  z-index: 1050;
+  overflow-y: auto;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-scrollable {
+  height: calc(100% - var(--modal-margin) * 2);
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+.modal-btn-close {
+  float: right;
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: sans-serif;
+  line-height: 1;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+
+.modal-btn-close:focus,
+.modal-btn-close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  color: #000;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid #e9ecef;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  color: #000;
+}
